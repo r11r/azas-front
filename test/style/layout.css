@@ -1,0 +1,94 @@
+
+#main {
+    width: 700px;
+    background-color: #fff;
+    padding: 25px; 
+    text-align: justify;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+#main h1,
+#main article > h2 {
+    height: 28px;
+    margin: 15pt 0 10px;
+    padding-left: 50px;
+    border-bottom: solid 1px #137390;
+    color: #137390;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#main h1:first-child,
+#main article:first-child > h2 {
+    margin-top: 0;
+}
+
+#main h2 {
+    height: 26px;
+    margin: 15pt 0 10px;
+    margin-left: 50px;
+    border-bottom: solid 1px #137390;
+    color: #137390;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#main h3 {
+    color: #137390;
+    font-size: 13pt;
+    font-weight: bold;
+    padding-left: 50px;
+    margin: 13pt 0px 0px 0px;
+}
+
+#main p {
+    padding-left: 50px;
+    margin: 8pt 0px 0px 0px;
+}
+
+#main p img {
+    display: block;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+#main p img.left {
+    float: left;
+    margin: 4pt 12pt 8pt 0;
+    max-width: 300px;
+}
+
+#main p img.right {
+    float: right;
+    margin: 4pt 0 8pt 12pt;
+    max-width: 300px;
+}
+
+#main ul {
+    padding-left: 67px;
+    margin: 8pt 0px 0px 0px;
+}
+
+#main table {
+    margin: 8pt 0 0 50px;
+    border-collapse: collapse;
+}
+
+/* #main table tr:nth-child(2n) {
+    background: #eee;
+} */
+
+#main table td, #main table th {
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+#main table th {
+    font-weight: normal;
+    font-style: italic;
+}
