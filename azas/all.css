@@ -1,0 +1,112 @@
+/* 
+ * Login 
+ */
+
+#login label {
+    margin-right: 1em;
+}
+
+#login button, 
+#login input
+{
+    display: run-in;
+    margin: 0;
+    padding: 0 .3em;
+    border: solid grey 0.05rem;
+    height: 2rem;
+}
+
+/*
+ * Council
+ */
+
+#council {
+    padding-left: 50px; /* Hauptseitenlayout */
+}
+
+#council h3 {
+    padding-left: 0;
+}
+
+#council ul {
+    margin: .3rem 0 1rem;
+    padding: 0;
+    border-top: solid grey .05rem;
+}
+
+#council li {
+    position: relative;
+    padding: .2em 1em;
+    border: solid grey .05rem;
+    border-top: none;
+    list-style: none;
+    overflow: hidden;
+}
+
+#council nav {
+    position: absolute;
+    left: 4em; /* don't cover expand button*/
+    right: 1em;
+    top: .2em;
+}
+
+#council nav a,
+#council a.expand,
+#council button
+{
+    display: block;
+    float: right;
+    margin-left:.1rem;
+    background-color: #eee;
+    height: 1.3rem;
+    width: 1.3rem;
+    text-align: center;
+}
+
+#council nav a:hover,
+#council a.expand:hover
+{
+    text-decoration: none;
+}
+
+#council a.expand {
+    float:left;
+    margin: 0;
+}
+
+#council button {
+    position: absolute;
+    top: .3rem;
+    right: 1rem;
+    width: auto;
+    color: #137390;
+    font-size: 80%;
+    border: none;
+}
+
+#council li ul, 
+#council li li
+{
+    border: none;
+    margin: 0;
+}
+
+#council li li {
+    padding: .1rem;
+    background-color: #f7f7f7;
+    margin: .1rem .2rem;
+    float: left;
+}
+
+#council .break {
+    clear: both;
+}
+
+#council .label,
+#council label
+{
+    display: block;
+    color: #444;
+    font-variant: small-caps;
+    font-size: 70%;
+}
