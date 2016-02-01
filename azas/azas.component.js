@@ -2,7 +2,7 @@
   azas.AzasComponent =
     ng.core.Component({
       selector: '#azas',
-      template: '<h1>Anmeldung zur Zapf am See</h1>'
+      templateUrl: 'azas/azas.component.html'
     })
     .Class({
       constructor: function() {}
