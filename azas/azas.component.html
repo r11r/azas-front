@@ -1,3 +1,5 @@
 <h1>Anmeldung zur Zapf am See</h1>
-<div class="azaslogin" *ngIf="view=='login'" (submit)="login($event)">lädt</div>
-<div class="azascouncil" *ngIf="view=='council'" [token]="token"></div>
+<p class="azas info" *ngIf="view=='loading'">Wird geladen</p>
+<p class="azas warning" *ngIf="view=='badlogin'">Ungültiger Token!</p>
+<div class="azas azaslogin" *ngIf="view=='login' || view=='badlogin'" (submit)="login($event)">lädt</div>
+<div class="azas azascouncil" *ngIf="view=='council'" [token]="token"></div>

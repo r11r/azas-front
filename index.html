@@ -14,28 +14,28 @@
             
             <!-- Load libraries -->
             
-            <!-- IE required polyfill -->
+            <!-- IE required polyfills, in this exact order -->
             <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+            <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
 
             <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-            <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
-            <script src="node_modules/angular2/bundles/angular2-all.umd.js"></script>
+            <script src="node_modules/systemjs/dist/system.src.js"></script>
+            <script src="node_modules/rxjs/bundles/Rx.js"></script>
+            <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+            <script src="node_modules/angular2/bundles/http.js"></script>
 
-            <!-- Load components -->
-            <script src='azas/rest.js'></script>
-            <script src='azas/login.component.js'></script>
-            <script src='azas/council.component.js'></script>
-            <script src='azas/azas.component.js'></script>
+            <!-- Load azas -->
             <script>
                 // <[CDATA[
-                (function(azas) {
-                    document.addEventListener('DOMContentLoaded', function() {
-                        ng.platform.browser.bootstrap(azas.AzasComponent);
-                    });
-                })(window.azas || (window.azas = {}));
+                System.config({ packages: { azas: {
+                            format: 'register',
+                            defaultExtension: 'js'
+                }}});
+                System.import('azas/bootstrap').then(null, console.error.bind(console));
+                // ]]>
             </script>
 
-            <div id="azas"></div>
+            <div class="azasmain"></div>
 
             <!-- END embedded azas html -->
         </div>
