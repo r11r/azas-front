@@ -2,4 +2,4 @@
 <p class="azas info" *ngIf="view=='loading'">Wird geladen</p>
 <p class="azas warning" *ngIf="view=='badlogin'">Ungültiger Token!</p>
 <div class="azas azaslogin" *ngIf="view=='login' || view=='badlogin'" (submit)="login($event)">lädt</div>
-<div class="azas azascouncil" *ngIf="view=='council'" [token]="token"></div>
+<div class="azas azascouncil" *ngIf="view=='council'" [council]="council"></div>

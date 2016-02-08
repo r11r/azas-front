@@ -2,12 +2,12 @@
  * Login 
  */
 
-#login label {
+#main .azaslogin label {
     margin-right: 1em;
 }
 
-#login button, 
-#login input
+#main .azaslogin button, 
+#main .azaslogin input
 {
     display: run-in;
     margin: 0;
@@ -20,21 +20,21 @@
  * Council
  */
 
-#council {
+#main .azascouncil {
     padding-left: 50px; /* Hauptseitenlayout */
 }
 
-#council h3 {
+#main .azascouncil h3 {
     padding-left: 0;
 }
 
-#council ul {
+#main .azascouncil ul {
     margin: .3rem 0 1rem;
     padding: 0;
     border-top: solid grey .05rem;
 }
 
-#council li {
+#main .azascouncil li {
     position: relative;
     padding: .2em 1em;
     border: solid grey .05rem;
@@ -43,16 +43,16 @@
     overflow: hidden;
 }
 
-#council nav {
+#main .azascouncil nav {
     position: absolute;
     left: 4em; /* don't cover expand button*/
     right: 1em;
     top: .2em;
 }
 
-#council nav a,
-#council a.expand,
-#council button
+#main .azascouncil nav a,
+#main .azascouncil a.expand,
+#main .azascouncil button
 {
     display: block;
     float: right;
@@ -63,18 +63,18 @@
     text-align: center;
 }
 
-#council nav a:hover,
-#council a.expand:hover
+#main .azascouncil nav a:hover,
+#main .azascouncil a.expand:hover
 {
     text-decoration: none;
 }
 
-#council a.expand {
+#main .azascouncil a.expand {
     float:left;
     margin: 0;
 }
 
-#council button {
+#main .azascouncil button {
     position: absolute;
     top: .3rem;
     right: 1rem;
@@ -84,26 +84,26 @@
     border: none;
 }
 
-#council li ul, 
-#council li li
+#main .azascouncil li ul, 
+#main .azascouncil li li
 {
     border: none;
     margin: 0;
 }
 
-#council li li {
+#main .azascouncil li li {
     padding: .1rem;
     background-color: #f7f7f7;
     margin: .1rem .2rem;
     float: left;
 }
 
-#council .break {
+#main .azascouncil .break {
     clear: both;
 }
 
-#council .label,
-#council label
+#main .azascouncil .label,
+#main .azascouncil label
 {
     display: block;
     color: #444;

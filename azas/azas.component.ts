@@ -6,8 +6,7 @@ import {RestClient} from './rest'
 @Component({
     selector: '.azasmain',
     directives: [LoginComponent, CouncilComponent],
-    templateUrl: 'azas/azas.component.html',
-    styleUrls:['azas/all.css']
+    templateUrl: 'azas/azas.component.html'
 })
 export class AzasComponent {
 
