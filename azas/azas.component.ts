@@ -4,35 +4,35 @@ import {CouncilComponent} from './council.component';
 import {RestClient} from './rest'
 
 @Component({
-	selector: '.azasmain',
-	directives: [LoginComponent, CouncilComponent],
-	templateUrl: 'azas/azas.component.html',
-	styleUrls:['azas/all.css']
+    selector: '.azasmain',
+    directives: [LoginComponent, CouncilComponent],
+    templateUrl: 'azas/azas.component.html',
+    styleUrls:['azas/all.css']
 })
 export class AzasComponent {
 
-	public view = 'login';
-	public token = '';
-	public council = {};
+    public view = 'login';
+    public token = '';
+    public council = {};
 	
-	constructor(private rest: RestClient) {}
+    constructor(private rest: RestClient) {}
 	
-	login(token: string) {
+    login(token: string) {
         this.token = token;
         this.view = "loading";
         console.log("Login attempt: "+token);
-        this.rest.getCouncil(token, this.tokensuccess, this.tokenfail)
+        this.rest.getCouncil(
+            token, 
+            (data: Object) => {
+                console.log("loginsuccess");
+                this.council = data;
+                this.view = "council";
+            },
+            (code: number) => {
+                console.log("Login fail: "+code.toString());
+                this.view = "badlogin";
+            }
+        )
     }
 
-    tokensuccess(data) {
-        console.log("loginsuccess");
-        this.council = data;
-        this.view = "council";
-    }
-
-    tokenfail(code) {
-        console.log("Login fail: "+code.toString());
-        this.view = "badlogin";
-    }
-	
 }
