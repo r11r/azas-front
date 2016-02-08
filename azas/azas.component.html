@@ -1,2 +1,3 @@
 <h1>Anmeldung zur Zapf am See</h1>
-
+<div class="azaslogin" *ngIf="view=='login'" (submit)="login($event)">lädt</div>
+<div class="azascouncil" *ngIf="view=='council'" [token]="token"></div>
