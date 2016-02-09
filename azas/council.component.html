@@ -11,7 +11,12 @@
 <h3>Maskottchen</h3>
 <section class="azasmascots">
     <ul>
-        <li *ngFor="#mascot of council.mascots" class="azasmascot" [mascot]="mascot" (deleted)="delMascot($event)"></li>
+        <li *ngFor="#mascot of council.mascots" 
+            class="azasmascot" 
+            [token]="council.info.token" 
+            [mascot]="mascot" 
+            (deleted)="delMascot($event)">
+        </li>
         <li class="azasnew">
             <nav>
                 <button (click)="newMascot()">Neues Maskottchen</button>

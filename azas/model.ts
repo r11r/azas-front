@@ -50,3 +50,7 @@ export interface Council {
     participants: Participant[];
     mascots: Mascot[];
 }
+
+export interface Identifiable {
+    id: string;
+}

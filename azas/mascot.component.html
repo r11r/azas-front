@@ -1,9 +1,11 @@
 <nav>
-    <button (click)="delete()">&#10007;</button>
+    <button *ngIf="state=='display' || state=='edit'" (click)="delete()">&#10007;</button>
     <button *ngIf="state=='display'" (click)="edit()">&#9998;</button>
     <button *ngIf="state=='edit'" (click)="save()">Speichern</button>
 </nav>
-<span>{{mascot.nickName}} ({{mascot.fullName}})</span>
+{{mascot.nickName}} ({{mascot.fullName}}) 
+<span *ngIf="state=='save'" class="azasprocess"> - wird gespeichert</span> 
+<span *ngIf="state=='delete'" class="azasprocess"> - wird gelöscht</span> 
 <form *ngIf="state=='edit'">
     <table>
         <tr>
