@@ -1,4 +1,3 @@
-<p style="margin: 1rem 0; padding: 0; color: grey; font-size:80%;">{{council | json}}</p>
 <section class="azasfsinfo">
     <ul>
         <li>{{council.info.university}}</li>
@@ -6,14 +5,16 @@
         <li>{{council.info.address }}</li>
     </ul>
 </section>
-<h3>Teilnehmer</h3>
+<h3>Teilnehmika</h3>
 <section class="azasparticpants">
     <ul>
-        <li *ngFor="#part of council.participants" 
+        <li *ngFor="#part of council.participants; #i = index" 
             class="azasparticipant" 
             [token]="council.info.token" 
-            [part]="part" 
-            (deleted)="delParticipant($event)">
+            [part]="part"
+            (deleted)="delParticipant(i)"
+            (up)="participantUp(i)"
+            (down)="participantDown(i)">
         </li>
         <li class="azasnew">
             <nav>
@@ -38,3 +39,5 @@
         </li>
     </ul>
 </section>
+<pre style="margin: 1rem 0; padding: 0; color: grey; font-size:80%;">{{council | json}}</pre>
+

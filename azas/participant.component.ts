@@ -13,17 +13,29 @@ export class ParticipantComponent implements OnInit {
     @Input() public token: string;
     @Input() public part: Participant;
     @Output() public deleted: EventEmitter<Participant> = new EventEmitter();
-    public state = 'display';
+    @Output() public up: EventEmitter<boolean> = new EventEmitter();
+    @Output() public down: EventEmitter<boolean> = new EventEmitter();
+    public state: string;
 
     constructor(private rest: RestClient) {}    
     
     public ngOnInit() {
         if(this.part.id=="") {
-            this.state = 'edit'
+            this.state = 'edit';
+        } else {
+            this.state = 'display';
         }
     }
 
     public gremiums = ['keins', 'StAPF', 'TOPF', 'KomGrem'];
+
+    public goUp() {
+        this.up.emit(true);
+    }
+    
+    public goDown() {
+        this.down.emit(true);
+    }
 
     public edit() {
         this.state = 'edit';

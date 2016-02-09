@@ -1,6 +1,8 @@
 <nav>
     <button *ngIf="state=='display' || state=='edit'" (click)="delete()">&#10007;</button>
     <button *ngIf="state=='display'" (click)="edit()">&#9998;</button>
+    <button *ngIf="state=='display'" (click)="goUp()">&#8679;</button>
+    <button *ngIf="state=='display'" (click)="goDown()">&#8681;</button>
     <button *ngIf="state=='edit'" (click)="save()">Speichern</button>
 </nav>
 {{part.info.nickName}} ({{part.info.firstName}} {{part.info.lastName}}) 

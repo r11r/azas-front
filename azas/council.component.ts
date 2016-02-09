@@ -1,4 +1,4 @@
-import {Component, Input, Output} from 'angular2/core';
+import {Component, Input, Output, ViewQuery, QueryList} from 'angular2/core';
 import {ParticipantInfo, Participant, Mascot, CouncilInfo, Council} from './model'
 import {MascotComponent} from './mascot.component'
 import {ParticipantComponent} from './participant.component'
@@ -12,13 +12,43 @@ export class CouncilComponent {
 
     @Input() council: Council;
 
-    public delParticipant(part: Participant) {
-        var index = this.council.participants.indexOf(part, 0);
-        if (index != undefined) {
-            this.council.participants.splice(index, 1);
-        } else {
-            console.log("ERROR: participant to be deleted not found!")
+    constructor(@ViewQuery(ParticipantComponent) public partComs: QueryList<ParticipantComponent>){
+        partComs.changes.subscribe(() => console.log(partComs.length));
+    }
+    
+    public participantUp(index: number) {
+        if(index != 0) {
+            // change participants:
+            var old = this.council.participants[index-1];
+            this.council.participants[index-1] = this.council.participants[index];
+            this.council.participants[index] = old;
+            // adjust priorities
+            this.council.participants[index-1].priority = index-1;
+            this.council.participants[index].priority = index;
+            // save both
+            this.partComs.toArray()[index-1].save();
+            this.partComs.toArray()[index].save();
         }
+    }
+
+    public participantDown(index: number) {
+        console.log(index);
+        if(index != this.council.participants.length-1) {
+            // change participants:
+            var old = this.council.participants[index+1];
+            this.council.participants[index+1] = this.council.participants[index];
+            this.council.participants[index] = old;
+            // adjust priorities
+            this.council.participants[index+1].priority = index+1;
+            this.council.participants[index].priority = index;
+            // save both
+            this.partComs.toArray()[index+1].save();
+            this.partComs.toArray()[index].save();
+        }
+    }
+
+    public delParticipant(index: number) {
+        this.council.participants.splice(index, 1);
     }
 
     public newParticipant() {
