@@ -7,7 +7,21 @@
     </ul>
 </section>
 <h3>Teilnehmer</h3>
-<section class="azasparticpants"></section>
+<section class="azasparticpants">
+    <ul>
+        <li *ngFor="#part of council.participants" 
+            class="azasparticipant" 
+            [token]="council.info.token" 
+            [part]="part" 
+            (deleted)="delParticipant($event)">
+        </li>
+        <li class="azasnew">
+            <nav>
+                <button (click)="newParticipant()">Neues Teilnehmikon</button>
+            </nav>
+        </li>
+    </ul>
+</section>
 <h3>Maskottchen</h3>
 <section class="azasmascots">
     <ul>

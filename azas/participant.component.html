@@ -1,0 +1,24 @@
+<nav>
+    <button *ngIf="state=='display' || state=='edit'" (click)="delete()">&#10007;</button>
+    <button *ngIf="state=='display'" (click)="edit()">&#9998;</button>
+    <button *ngIf="state=='edit'" (click)="save()">Speichern</button>
+</nav>
+{{part.info.nickName}} ({{part.info.firstName}} {{part.info.lastName}}) 
+<span *ngIf="state=='save'" class="azasprocess"> - wird gespeichert</span> 
+<span *ngIf="state=='delete'" class="azasprocess"> - wird gelöscht</span> 
+<form *ngIf="state=='edit'">
+    <table>
+        <tr>
+            <th><label for="nickname">Spitzname</label></th>
+            <td><input name="nickname" type="text" required="required" [(ngModel)]="part.info.nickName"></td>
+        </tr>
+        <tr>
+            <th><label for="firstname">Vorname</label></th>
+            <td><input name="firstname" type="text" required="required" [(ngModel)]="part.info.firstName"></td>
+        </tr>
+        <tr>
+            <th><label for="lastname">Nachname</label></th>
+            <td><input name="lastname" type="text" required="required" [(ngModel)]="part.info.lastName"></td>
+        </tr>
+    </table>
+</form>
