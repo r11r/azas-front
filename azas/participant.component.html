@@ -20,5 +20,121 @@
             <th><label for="lastname">Nachname</label></th>
             <td><input name="lastname" type="text" required="required" [(ngModel)]="part.info.lastName"></td>
         </tr>
+        <tr>
+            <th><label for="email">Email</label></th>
+            <td><input name="email" type="text" required="required" [(ngModel)]="part.info.email"></td>
+        </tr>
+        <tr>
+            <th><label for="cell">Handynummer (optional)</label></th>
+            <td><input name="cell" type="text" [(ngModel)]="part.info.cell"></td>
+        </tr>
+        <tr>
+            <th><label for="gremium">Gremium</label></th>
+            <td>
+                <select name="gremium" [(ngModel)]="part.info.gremium">
+					<option [value]="''">Keins</option>
+					<option [value]="'stapf'">StAPF</option>
+					<option [value]="'topf'">ToPF</option>
+					<option [value]="'komgrem'">KomGrem</option>
+				</select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="tshirt">T-Shirt</label></th>
+            <td>
+                <select name="tshirt" [(ngModel)]="part.info.tshirt">
+							<option>xxs male</option>
+							<option>xs male</option>
+							<option>s male</option>
+							<option>m male</option>
+							<option>l male</option>
+							<option>xl male</option>
+							<option>xxl male</option>
+							<option>xxs female</option>
+							<option>xs female</option>
+							<option>s female</option>
+							<option>m female</option>
+							<option>l female</option>
+							<option>xl female</option>
+							<option>xxl female</option>
+							<option>Ich bin René</option>
+						</select>
+						</td>
+        </tr>
+        <tr>
+            <th><label for="robe">Bademantel ??</label></th>
+            <td><input name="robe" type="text" [(ngModel)]="part.info.robe"></td>
+        </tr>
+        <tr>
+            <th><label for="food">Essen</label></th>
+            <td>
+            <select name="food" [(ngModel)]="part.info.food">
+							<option>omnivor</option>
+							<option>vegetarisch</option>
+							<option>vegan</option>
+						</select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="allergies">Allergien</label></th>
+            <td><input name="allergies" type="text" [(ngModel)]="part.info.allergies"></td>
+        </tr>
+        <tr>
+            <th><label for="excursion1">Exkursion 1</label></th>
+            <td><input name="excursion1" type="text" required="required" [(ngModel)]="part.info.excursion1"></td>
+        </tr>
+        <tr>
+            <th><label for="excursion2">Exkursion 2</label></th>
+            <td><input name="excursion2" type="text" required="required" [(ngModel)]="part.info.excursion2"></td>
+        </tr>
+        <tr>
+            <th><label for="excursion3">Exkursion 3</label></th>
+            <td><input name="excursion3" type="text" required="required" [(ngModel)]="part.info.excursion3"></td>
+        </tr>
+        <tr>
+            <th><label for="dayOfBirth">Geburtstag (dd.mm.yyyy)</label></th>
+            <td><input name="dayOfBirth" type="text" [(ngModel)]="part.info.dayOfBirth"></td>
+        </tr>
+        <tr>
+            <th><label for="nationality">Nationalität</label></th>
+            <td><input name="nationality" type="text" [(ngModel)]="part.info.nationality"></td>
+        </tr>
+        <tr>
+            <th><label for="address">Adresse</label></th>
+            <td><input name="address" type="text" [(ngModel)]="part.info.address"></td>
+        </tr>
+        <tr>
+            <th><label for="comment">Kommentar</label></th>
+            <td><input name="comment" type="text" [(ngModel)]="part.info.comment"></td>
+        </tr>
+        <tr>
+            <th><label for="zaepfchen">ZäPFchen (zum ersten mal hier?)</label></th>
+            <td><input name="zaepfchen" type="checkbox" [(ngModel)]="part.info.zaepfchen"></td>
+        </tr>
+        <tr>
+            <th><label for="swimmer">Schwimmer?</label></th>
+            <td>
+                <select name="swimmer" [(ngModel)]="part.info.swimmer">
+                        <option>Ente</option>
+							<option>Geht so</option>
+							<option>Block Granit</option>
+                </select>
+                </td>
+        </tr>
+        <tr>
+            <th><label for="snorer">Schnarcher?</label></th>
+            <td>
+            <select name="snorer" [(ngModel)]="part.info.snorer">
+							<option>Nein</option>
+							<option>Ein wenig</option>
+							<option>Stark</option>
+							<option>Motorsäge</option>
+						</select>
+						</td>
+        </tr>
+        <tr>
+            <th><label for="arrival">Ankunft</label></th>
+            <td><input name="arrival" type="text" [(ngModel)]="part.info.arrival"></td>
+        </tr>
     </table>
 </form>

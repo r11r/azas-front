@@ -1,10 +1,12 @@
 import {Component, Input, Output, EventEmitter, OnInit} from 'angular2/core';
+import {FORM_DIRECTIVES} from 'angular2/common';
 import {Identifiable, Participant, ParticipantInfo} from './model'
 import {RestClient} from './rest'
 
 @Component({
-	selector: '.azasparticipant',
-	templateUrl: 'azas/participant.component.html'
+    selector: '.azasparticipant',
+    directives: [FORM_DIRECTIVES],
+    templateUrl: 'azas/participant.component.html'
 })
 export class ParticipantComponent implements OnInit {
 
