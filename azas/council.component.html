@@ -1,4 +1,4 @@
-<p>{{council | json}}</p>
+<p style="margin: 1rem 0; padding: 0; color: grey; font-size:80%;">{{council | json}}</p>
 <section class="azasfsinfo">
     <ul>
         <li>{{council.info.university}}</li>
@@ -9,4 +9,13 @@
 <h3>Teilnehmer</h3>
 <section class="azasparticpants"></section>
 <h3>Maskottchen</h3>
-<section class="azasmascots"></section>
+<section class="azasmascots">
+    <ul>
+        <li *ngFor="#mascot of council.mascots" class="azasmascot" [mascot]="mascot" (deleted)="delMascot($event)"></li>
+        <li class="azasnew">
+            <nav>
+                <button (click)="newMascot()">Neues Maskottchen</button>
+            </nav>
+        </li>
+    </ul>
+</section>

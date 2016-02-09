@@ -1,0 +1,18 @@
+<nav>
+    <button (click)="delete()">&#10007;</button>
+    <button *ngIf="state=='display'" (click)="edit()">&#9998;</button>
+    <button *ngIf="state=='edit'" (click)="save()">Speichern</button>
+</nav>
+<span>{{mascot.nickName}} ({{mascot.fullName}})</span>
+<form *ngIf="state=='edit'">
+    <table>
+        <tr>
+            <th><label for="nickname">Spitzname</label></th>
+            <td><input name="nickname" type="text" required="required" [(ngModel)]="mascot.nickName"></td>
+        </tr>
+        <tr>
+            <th><label for="fullname">Voller Name</label></th>
+            <td><input name="fullname" type="text" required="required" [(ngModel)]="mascot.fullName"></td>
+        </tr>
+    </table>
+</form>

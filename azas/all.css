@@ -31,71 +31,50 @@
 #main .azascouncil ul {
     margin: .3rem 0 1rem;
     padding: 0;
-    border-top: solid grey .05rem;
+    border-top: solid #ccc .03rem;
 }
 
 #main .azascouncil li {
     position: relative;
     padding: .2em 1em;
-    border: solid grey .05rem;
+    border: solid #ccc .03rem;
     border-top: none;
     list-style: none;
     overflow: hidden;
+    min-height: 1.4rem;
 }
 
 #main .azascouncil nav {
     position: absolute;
-    left: 4em; /* don't cover expand button*/
-    right: 1em;
-    top: .2em;
+    left: 4rem; /* don't cover expand button*/
+    right: 1rem;
+    top: .2rem;
 }
 
-#main .azascouncil nav a,
-#main .azascouncil a.expand,
 #main .azascouncil button
 {
     display: block;
     float: right;
     margin-left:.1rem;
     background-color: #eee;
+    border: none;
+    color: #137390;
     height: 1.3rem;
-    width: 1.3rem;
+    width: auto;
+    font-size: 80%;
     text-align: center;
 }
 
-#main .azascouncil nav a:hover,
-#main .azascouncil a.expand:hover
-{
-    text-decoration: none;
+#main .azascouncil .azasnew {
+    border-style: dashed;
+    border-top: none;
 }
 
-#main .azascouncil a.expand {
-    float:left;
-    margin: 0;
-}
-
-#main .azascouncil button {
-    position: absolute;
-    top: .3rem;
-    right: 1rem;
-    width: auto;
-    color: #137390;
-    font-size: 80%;
-    border: none;
-}
-
-#main .azascouncil li ul, 
-#main .azascouncil li li
+#main .azascouncil td, 
+#main .azascouncil th
 {
     border: none;
     margin: 0;
-}
-
-#main .azascouncil li li {
-    padding: .1rem;
-    background-color: #f7f7f7;
-    margin: .1rem .2rem;
-    float: left;
 }
 
 #main .azascouncil .break {
@@ -106,7 +85,7 @@
 #main .azascouncil label
 {
     display: block;
-    color: #444;
+    color: #333;
     font-variant: small-caps;
-    font-size: 70%;
+    font-size: 80%;
 }

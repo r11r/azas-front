@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {LoginComponent} from './login.component';
 import {CouncilComponent} from './council.component';
 import {RestClient} from './rest'
@@ -8,7 +8,7 @@ import {RestClient} from './rest'
     directives: [LoginComponent, CouncilComponent],
     templateUrl: 'azas/azas.component.html'
 })
-export class AzasComponent {
+export class AzasComponent implements OnInit {
 
     public view = 'login';
     public token = '';
@@ -32,6 +32,13 @@ export class AzasComponent {
                 this.view = "badlogin";
             }
         )
+    }
+
+    ngOnInit() {
+        if(window.location.hash) {
+            var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+            this.login(hash);
+        }
     }
 
 }
