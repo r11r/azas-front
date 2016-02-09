@@ -23,6 +23,8 @@ export class ParticipantComponent implements OnInit {
         }
     }
 
+    public gremiums = ['keins', 'StAPF', 'TOPF', 'KomGrem'];
+
     public edit() {
         this.state = 'edit';
     }
