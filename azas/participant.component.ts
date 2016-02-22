@@ -28,6 +28,12 @@ export class ParticipantComponent implements OnInit {
     }
 
     public gremiums = ['keins', 'StAPF', 'TOPF', 'KomGrem'];
+    public tshirts = ['xxs male','xs male','s male','m male','l male','xl male','xxl male','Ich bin Rene'];
+    public foods = ['omnivor','vegetarisch','vegan'];
+    public swimmers = ['entenmäßig', 'geht so', 'wie ein Block Granit'];
+    public snorers = ['nein','ein bisschen','stark','Motorsäge'];
+
+    public excursions = ['kein','Plan','bla','blub'];
 
     public goUp() {
         this.up.emit(true);
@@ -82,6 +88,10 @@ export class ParticipantComponent implements OnInit {
                 window.alert("Serverfehler: "+code.toString());
             }
         );
+    }
+
+    public updateTshirt(event) {
+        //alert(stringyfy(event));
     }
     
 }

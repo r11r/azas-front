@@ -33,7 +33,7 @@
         <tr>
             <th><label for="gremium">Gremium</label></th>
             <td>
-                <select id="gremium" [(ngModel)]="part.info.gremium">
+                <select id="gremium" #gremium [(ngModel)]="part.info.gremium" (change)="part.info.gremium=gremium.value">
                     <option *ngFor="#g of gremiums" [value]="g">{{g}}</option>
                 </select>
             </td>
@@ -41,69 +41,65 @@
         <tr>
             <th><label for="tshirt">T-Shirt</label></th>
             <td>
-                <select id="tshirt" [(ngModel)]="part.info.tshirt">
-                    <option>xxs male</option>
-                    <option>xs male</option>
-                    <option>s male</option>
-                    <option>m male</option>
-                    <option>l male</option>
-                    <option>xl male</option>
-                    <option>xxl male</option>
-                    <option>xxs female</option>
-                    <option>xs female</option>
-                    <option>s female</option>
-                    <option>m female</option>
-                    <option>l female</option>
-                    <option>xl female</option>
-                    <option>xxl female</option>
-                    <option>Ich bin René</option>
+                <select id="tshirt" #tshirt [ngModel]="part.info.tshirt" (change)="part.info.tshirt=tshirt.value">
+                    <option *ngFor="#t of tshirts" [value]="t">{{t}}</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <th><label for="robe">Bademantel ??</label></th>
-            <td><input id="robe" type="text" [(ngModel)]="part.info.robe"></td>
+            <th><label for="robe">Ich möchte einen Bademantel für (maximal) XX Euro kaufen</label></th>
+            <td><input id="robe" type="checkbox" [(ngModel)]="part.info.robe"></td>
         </tr>
         <tr>
             <th><label for="food">Essen</label></th>
             <td>
-                <select id="food" [(ngModel)]="part.info.food">
-                    <option>omnivor</option>
-                    <option>vegetarisch</option>
-                    <option>vegan</option>
+                <select id="food" #food [(ngModel)]="part.info.food" (change)="part.info.food=food.value">
+                    <option *ngFor="#f of foods" [value]="f">{{f}}</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <th><label for="allergies">Allergien</label></th>
+            <th><label for="allergies">Allergien (optional)</label></th>
             <td><input id="allergies" type="text" [(ngModel)]="part.info.allergies"></td>
         </tr>
         <tr>
-            <th><label for="excursion1">Exkursion 1</label></th>
-            <td><input id="excursion1" type="text" required="required" [(ngModel)]="part.info.excursion1"></td>
+            <th><label for="excursion1">Exkursionswunsch 1</label></th>
+            <td>
+                <select id="excursion1" #excursion1 [(ngModel)]="part.info.excursion1" (change)="part.info.excursion1=excursion1.value">
+                    <option *ngFor="#e of excursions" [value]="e">{{e}}</option>
+                </select>
+            </td>
         </tr>
         <tr>
-            <th><label for="excursion2">Exkursion 2</label></th>
-            <td><input id="excursion2" type="text" required="required" [(ngModel)]="part.info.excursion2"></td>
+            <th><label for="excursion2">Exkursionswunsch 2</label></th>
+            <td>
+                <select id="excursion2" #excursion2 [(ngModel)]="part.info.excursion2" (change)="part.info.excursion2=excursion2.value">
+                    <option *ngFor="#e of excursions" [value]="e">{{e}}</option>
+                </select>
+            </td>
         </tr>
         <tr>
-            <th><label for="excursion3">Exkursion 3</label></th>
-            <td><input id="excursion3" type="text" required="required" [(ngModel)]="part.info.excursion3"></td>
+            <th><label for="excursion3">Exkursionswunsch 3</label></th>
+            <td>
+                <select id="excursion3" #excursion3 [(ngModel)]="part.info.excursion3" (change)="part.info.excursion3=excursion3.value">
+                    <option *ngFor="#e of excursions" [value]="e">{{e}}</option>
+                </select>
+            </td>
         </tr>
         <tr>
-            <th><label for="dayOfBirth">Geburtstag (dd.mm.yyyy)</label></th>
+            <th><label for="dayOfBirth">* Geburtstag (dd.mm.yyyy)</label></th>
             <td><input id="dayOfBirth" type="text" [(ngModel)]="part.info.dayOfBirth"></td>
         </tr>
         <tr>
-            <th><label for="nationality">Nationalität</label></th>
+            <th><label for="nationality">* Nationalität</label></th>
             <td><input id="nationality" type="text" [(ngModel)]="part.info.nationality"></td>
         </tr>
         <tr>
-            <th><label for="address">Adresse</label></th>
+            <th><label for="address">* Adresse</label></th>
             <td><input id="address" type="text" [(ngModel)]="part.info.address"></td>
         </tr>
         <tr>
-            <th><label for="comment">Kommentar</label></th>
+            <th><label for="comment">Kommentar (optional)</label></th>
             <td><input id="comment" type="text" [(ngModel)]="part.info.comment"></td>
         </tr>
         <tr>
@@ -113,27 +109,23 @@
         <tr>
             <th><label for="swimmer">Schwimmer?</label></th>
             <td>
-                <select id="swimmer" [(ngModel)]="part.info.swimmer">
-                    <option>Ente</option>
-                    <option>Geht so</option>
-                    <option>Block Granit</option>
+                <select id="swimmer" #swimmer [(ngModel)]="part.info.swimmer" (change)="part.info.swimmer=swimmer.value">
+                    <option *ngFor="#s of swimmers" [value]="s">{{s}}</option>
                 </select>
             </td>
         </tr>
         <tr>
             <th><label for="snorer">Schnarcher?</label></th>
             <td>
-                <select id="snorer" [(ngModel)]="part.info.snorer">
-                    <option>Nein</option>
-                    <option>Ein wenig</option>
-                    <option>Stark</option>
-                    <option>Motorsäge</option>
+                <select id="snorer" #snorer [(ngModel)]="part.info.snorer" (change)="part.info.snorer=snorer.value">
+                    <option *ngFor="#s of snorers" [value]="s">{{s}}</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <th><label for="arrival">Ankunft</label></th>
+            <th><label for="arrival">Ankunft (wenn ihr am Bahnhof abgeholt werden möchtet)</label></th>
             <td><input id="arrival" type="text" [(ngModel)]="part.info.arrival"></td>
         </tr>
     </table>
+    <p class="fieldinfo">* nur für Exkursionen X,Y und Z benötigt</p>
 </form>

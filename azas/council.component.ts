@@ -65,7 +65,7 @@ export class CouncilComponent {
                 cell: "",
                 gremium: "",
                 tshirt: "",
-                robe: "",
+                robe: false,
                 food: "",
                 allergies: "",
                 excursion1: "",

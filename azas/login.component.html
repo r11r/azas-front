@@ -1,5 +1,7 @@
-<p>
-    <label for="token">Fachschaftstoken:</label>
-    <input type="text" id="token" name="token" placeholder="token" [(ngModel)]="token" />
-    <button (click)="doSubmit()">Login</button>
-</p>
+<form (ngSubmit)="login()">
+    <p>
+        <label for="token">Fachschaftstoken:</label>
+        <input type="text" id="token" placeholder="token" [(ngModel)]="token" />
+        <button type="submit">Login</button>
+    </p>
+</form>

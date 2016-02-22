@@ -6,7 +6,7 @@ export interface ParticipantInfo {
     cell: string;
     gremium: string;
     tshirt: string;
-    robe: string;
+    robe: boolean;
     food: string;
     allergies: string;
     excursion1: string;

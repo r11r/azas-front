@@ -48,7 +48,7 @@
     position: absolute;
     left: 4rem; /* don't cover expand button*/
     right: 1rem;
-    top: .2rem;
+    bottom: .2rem;
 }
 
 #main .azascouncil button
@@ -70,22 +70,43 @@
     border-top: none;
 }
 
+#main .azascouncil table {
+    margin: 0;
+    margin-bottom: .5em;
+}
+
 #main .azascouncil td, 
 #main .azascouncil th
 {
     border: none;
     margin: 0;
+    vertical-align: middle;
+}
+
+#main .azascouncil input,
+#main .azascouncil select
+{
+    border: 1px solid grey;
+    font-size: inherit;
+    padding: .1em;
+    margin: .1em;
 }
 
 #main .azascouncil .break {
     clear: both;
 }
 
-#main .azascouncil .label,
-#main .azascouncil label
-{
-    display: block;
-    color: #333;
-    font-variant: small-caps;
+#main .azascouncil th
+{   
+    text-align: right;
+    max-width: 17em;
+    color: #222;
     font-size: 80%;
+}
+
+#main .azascouncil .fieldinfo {
+    text-align: center;
+    color: #222;
+    font-size: 80%;
+    font-style: italic;
 }
