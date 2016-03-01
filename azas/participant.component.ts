@@ -27,13 +27,14 @@ export class ParticipantComponent implements OnInit {
         }
     }
 
-    public gremiums = ['keins', 'StAPF', 'TOPF', 'KomGrem','Vorstand ZaPF e.V.'];
+    public gremiums = ['', 'StAPF', 'TOPF', 'KomGrem','Vorstand ZaPF e.V.'];
     public tshirts = ['xxs male','xs male','s male','m male','l male','xl male','xxl male','xxs female','xs female','s female','m female','l female','xl female','xxl female'];
     public foods = ['omnivor','vegetarisch','vegan'];
     public swimmers = ['entenmäßig', 'geht so', 'wie ein Block Granit'];
     public snorers = ['nein','ein bisschen','stark','Motorsäge'];
+    public transportations = ['Zug','Fernbus','Auto','Sonsitiges']
 
-    public excursions = ['kein','Plan','bla','blub'];
+    public excursions = ['','PSI (CH)','KKW (CH)','Technorama (CH)','Pfahlbauten','Ruppaner und Klärwerk','ISC und Stadtführung','Airbus und Dornier','Zeppelin und Dornier','Simulink Workshop'];
 
     public goUp() {
         this.up.emit(true);

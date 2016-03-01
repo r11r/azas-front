@@ -64,9 +64,9 @@ export class CouncilComponent {
                 email: "",
                 cell: "",
                 gremium: "",
-                tshirt: "",
+                tshirt: "male xl",
                 robe: false,
-                food: "",
+                food: "omnivor",
                 allergies: "",
                 excursion1: "",
                 excursion2: "",
@@ -81,9 +81,9 @@ export class CouncilComponent {
                 },
                 comment: "",
                 zaepfchen: false,
-                swimmer: "",
-                snorer: "",
-                arrival: "",
+                swimmer: "geht so",
+                snorer: "nein",
+                arrival: "Zug",
                 owntent: false
             }
         });

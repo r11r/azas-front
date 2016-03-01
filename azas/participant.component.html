@@ -3,7 +3,10 @@
     <button *ngIf="state=='display'" (click)="edit()">&#9998;</button>
     <button *ngIf="state=='display'" (click)="goUp()">&#8679;</button>
     <button *ngIf="state=='display'" (click)="goDown()">&#8681;</button>
-    <button *ngIf="state=='edit'" (click)="save()">Speichern</button>
+    <button *ngIf="state=='edit'" (click)="save()">
+        Speichern
+        <span *ngIf="part.info.robe==true"> und kostenpflichtig vorbestellen</span>
+    </button>
 </nav>
 {{part.info.nickName}} ({{part.info.firstName}} {{part.info.lastName}}) 
 <span *ngIf="state=='save'" class="azasprocess"> - wird gespeichert</span> 
@@ -139,8 +142,12 @@
             <td><input id="owntent" type="checkbox" [(ngModel)]="part.info.owntent"></td>
         </tr>
         <tr>
-            <th><label for="arrival">Ankunft (wenn ihr am Bahnhof abgeholt werden möchtet)</label></th>
-            <td><input id="arrival" type="text" [(ngModel)]="part.info.arrival"></td>
+            <th><label for="arrival">Ankunft mit </label></th>
+            <td>
+                <select id="arrival" #arrival [(ngModel)]="part.info.arrival" (change)="part.info.swimmer=swimmer.arrival">
+                    <option *ngFor="#t of transportations" [value]="t">{{t}}</option>
+                </select>
+            </td>
         </tr>
     </table>
     <p class="fieldinfo">* nur für Exkursionen X,Y und Z benötigt</p>
