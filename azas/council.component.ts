@@ -75,7 +75,7 @@ export class CouncilComponent {
                 nationality: "",
                 address: {
                     street: "",
-                    zipcode: "",
+                    zipCode: "",
                     city: "",
                     country: ""
                 },
