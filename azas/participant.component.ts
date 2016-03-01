@@ -27,7 +27,7 @@ export class ParticipantComponent implements OnInit {
         }
     }
 
-    public gremiums = ['keins', 'StAPF', 'TOPF', 'KomGrem'];
+    public gremiums = ['keins', 'StAPF', 'TOPF', 'KomGrem','Vorstand ZaPF e.V.'];
     public tshirts = ['xxs male','xs male','s male','m male','l male','xl male','xxl male','Ich bin Rene'];
     public foods = ['omnivor','vegetarisch','vegan'];
     public swimmers = ['entenmäßig', 'geht so', 'wie ein Block Granit'];
@@ -51,6 +51,7 @@ export class ParticipantComponent implements OnInit {
         this.state = 'save';
         if(this.part.id=="") this.rest.addParticipant(
             this.token,
+            this.part.priority,
             this.part.info,
             (response) => {
             this.part.id = (<Identifiable> response).id;

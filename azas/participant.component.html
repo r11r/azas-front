@@ -95,8 +95,20 @@
             <td><input id="nationality" type="text" [(ngModel)]="part.info.nationality"></td>
         </tr>
         <tr>
-            <th><label for="address">* Adresse</label></th>
-            <td><input id="address" type="text" [(ngModel)]="part.info.address"></td>
+            <th><label for="address-street">* Straße & Nummer</label></th>
+            <td><input id="address-street" type="text" [(ngModel)]="part.info.address.street"></td>
+        </tr>
+        <tr>
+            <th><label for="address-zipcode">* Postleitzahl</label></th>
+            <td><input id="address-zipcode" type="text" [(ngModel)]="part.info.address.zipCode"></td>
+        </tr>
+        <tr>
+            <th><label for="address-city">* Ort</label></th>
+            <td><input id="address-city" type="text" [(ngModel)]="part.info.address.city"></td>
+        </tr>
+        <tr>
+            <th><label for="address-country">* Land</label></th>
+            <td><input id="address-country" type="text" [(ngModel)]="part.info.address.country"></td>
         </tr>
         <tr>
             <th><label for="comment">Kommentar (optional)</label></th>
@@ -121,6 +133,10 @@
                     <option *ngFor="#s of snorers" [value]="s">{{s}}</option>
                 </select>
             </td>
+        </tr>
+        <tr>
+            <th><label for="owntent">Ich schlafe in einem eigenen Zelt</label></th>
+            <td><input id="owntent" type="checkbox" [(ngModel)]="part.info.owntent"></td>
         </tr>
         <tr>
             <th><label for="arrival">Ankunft (wenn ihr am Bahnhof abgeholt werden möchtet)</label></th>

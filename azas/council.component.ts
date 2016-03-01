@@ -73,12 +73,18 @@ export class CouncilComponent {
                 excursion3: "",
                 dayOfBirth: "",
                 nationality: "",
-                address: "",
+                address: {
+                    street: "",
+                    zipcode: "",
+                    city: "",
+                    country: ""
+                },
                 comment: "",
                 zaepfchen: false,
                 swimmer: "",
                 snorer: "",
-                arrival: ""
+                arrival: "",
+                owntent: false
             }
         });
     }

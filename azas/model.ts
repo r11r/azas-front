@@ -1,3 +1,10 @@
+export interface Address {
+    street: string;
+    zipCode: string;
+    city: string;
+    country: string;
+}
+
 export interface ParticipantInfo {
     firstName: string;
     lastName: string;
@@ -14,12 +21,13 @@ export interface ParticipantInfo {
     excursion3: string;
     dayOfBirth: string;
     nationality: string;
-    address: string;
+    address: Address;
     comment: string;
     zaepfchen: boolean;
     swimmer: string;
     snorer: string;
     arrival: string;
+    owntent: boolean;
 }
 
 export interface Participant {

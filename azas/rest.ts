@@ -21,8 +21,8 @@ export class RestClient {
     }
 
 	
-    addParticipant(token: string, participantInfo: ParticipantInfo, success: (obj: Object) => void, error: (code: number) => void) {
-        this.call("/v1/addpart", {token: token, info: participantInfo}, success, error)
+    addParticipant(token: string, priority: number, participantInfo: ParticipantInfo, success: (obj: Object) => void, error: (code: number) => void) {
+        this.call("/v1/addpart", {token: token, priority: priority, info: participantInfo}, success, error)
     }
 
     editParticipant(token: string, id: string, priority: number, info: ParticipantInfo, success: (obj: Object) => void, error: (code: number) => void) {
