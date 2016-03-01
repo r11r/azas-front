@@ -1,3 +1,25 @@
+/*
+ * General
+ */
+
+#main .azasmain nav {
+    overflow: hidden;
+}
+
+#main .azasmain button
+{
+    display: block;
+    float: right;
+    margin-left:.1rem;
+    background-color: #f9f9f9;
+    border: .03rem solid #ccc;
+    color: #137390;
+    height: 1.3rem;
+    width: auto;
+    font-size: 80%;
+    text-align: center;
+}
+
 /* 
  * Login 
  */
@@ -9,11 +31,13 @@
 #main .azaslogin button, 
 #main .azaslogin input
 {
-    display: run-in;
+    display: inline;
     margin: 0;
     padding: 0 .3em;
     border: solid grey 0.05rem;
     height: 2rem;
+    float: none;
+    font-size: 100%;
 }
 
 /*
@@ -44,29 +68,11 @@
     min-height: 1.4rem;
 }
 
-#main .azasmain nav {
-    overflow: hidden;
-}
-
 #main .azascouncil nav {
     position: absolute;
     left: 4rem; /* don't cover expand button*/
     right: 1rem;
     bottom: .2rem;
-}
-
-#main .azasmain button
-{
-    display: block;
-    float: right;
-    margin-left:.1rem;
-    background-color: #f9f9f9;
-    border: .03rem solid #ccc;
-    color: #137390;
-    height: 1.3rem;
-    width: auto;
-    font-size: 80%;
-    text-align: center;
 }
 
 #main .azascouncil .azasnew {
