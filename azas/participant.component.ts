@@ -32,7 +32,7 @@ export class ParticipantComponent implements OnInit {
     public foods = ['omnivor','vegetarisch','vegan'];
     public swimmers = ['entenmäßig', 'geht so', 'wie ein Block Granit'];
     public snorers = ['nein','ein bisschen','stark','Motorsäge'];
-    public transportations = ['Zug','Fernbus','Auto','Sonsitiges']
+    public transportations = ['Zug','Fernbus','Auto','Sonstiges']
 
     public excursions = ['','PSI (CH)','KKW (CH)','Technorama (CH)','Pfahlbauten','Ruppaner und Klärwerk','ISC und Stadtführung','Airbus und Dornier','Zeppelin und Dornier','Simulink Workshop'];
 

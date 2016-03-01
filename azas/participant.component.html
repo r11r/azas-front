@@ -50,7 +50,7 @@
             </td>
         </tr>
         <tr>
-            <th><label for="robe">Ich möchte einen Bademantel für (maximal) XX Euro kaufen</label></th>
+            <th><label for="robe">Ich möchte einen Bademantel für (maximal) 30€ kaufen</label></th>
             <td><input id="robe" type="checkbox" [(ngModel)]="part.info.robe"></td>
         </tr>
         <tr>
@@ -89,29 +89,59 @@
                 </select>
             </td>
         </tr>
-        <tr>
+        <tr *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' ">
             <th><label for="dayOfBirth">* Geburtstag (dd.mm.yyyy)</label></th>
-            <td><input id="dayOfBirth" type="text" [(ngModel)]="part.info.dayOfBirth"></td>
+            <td><input id="dayOfBirth" type="text" required="required" [(ngModel)]="part.info.dayOfBirth"></td>
         </tr>
-        <tr>
+        <tr *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' ">
             <th><label for="nationality">* Nationalität</label></th>
-            <td><input id="nationality" type="text" [(ngModel)]="part.info.nationality"></td>
+            <td><input id="nationality" type="text" required="required" [(ngModel)]="part.info.nationality"></td>
         </tr>
-        <tr>
+        <tr *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' ">
             <th><label for="address-street">* Straße & Nummer</label></th>
-            <td><input id="address-street" type="text" [(ngModel)]="part.info.address.street"></td>
+            <td><input id="address-street" type="text" required="required" [(ngModel)]="part.info.address.street"></td>
         </tr>
-        <tr>
+        <tr *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' ">
             <th><label for="address-zipcode">* Postleitzahl</label></th>
-            <td><input id="address-zipcode" type="text" [(ngModel)]="part.info.address.zipCode"></td>
+            <td><input id="address-zipcode" type="text" required="required" [(ngModel)]="part.info.address.zipCode"></td>
         </tr>
-        <tr>
+        <tr *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' ">
             <th><label for="address-city">* Ort</label></th>
-            <td><input id="address-city" type="text" [(ngModel)]="part.info.address.city"></td>
+            <td><input id="address-city" type="text" required="required" [(ngModel)]="part.info.address.city"></td>
         </tr>
-        <tr>
+        <tr *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' ">
             <th><label for="address-country">* Land</label></th>
-            <td><input id="address-country" type="text" [(ngModel)]="part.info.address.country"></td>
+            <td><input id="address-country" type="text" required="required" [(ngModel)]="part.info.address.country"></td>
         </tr>
         <tr>
             <th><label for="comment">Kommentar (optional)</label></th>
@@ -144,7 +174,7 @@
         <tr>
             <th><label for="arrival">Ankunft mit </label></th>
             <td>
-                <select id="arrival" #arrival [(ngModel)]="part.info.arrival" (change)="part.info.swimmer=swimmer.arrival">
+                <select id="arrival" #arrival [(ngModel)]="part.info.arrival" (change)="part.info.arrival=arrival.value">
                     <option *ngFor="#t of transportations" [value]="t">{{t}}</option>
                 </select>
             </td>

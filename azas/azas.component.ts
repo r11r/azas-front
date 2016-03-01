@@ -16,7 +16,7 @@ export class AzasComponent implements OnInit {
 	
     constructor(private rest: RestClient) {}
 	
-    login(token: string) {
+    public login(token: string) {
         this.token = token;
         this.view = "loading";
         console.log("Login attempt: "+token);
@@ -32,6 +32,12 @@ export class AzasComponent implements OnInit {
                 this.view = "badlogin";
             }
         )
+    }
+
+    public logout() {
+        this.token = "";
+        this.view = "login";
+        this.council = null;
     }
 
     ngOnInit() {
