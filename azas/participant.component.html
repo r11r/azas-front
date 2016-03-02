@@ -180,14 +180,23 @@
                 </select>
             </td>
         </tr>
-    </table>
-    <p *ngIf="part.info.excursion1=='KKW (CH)' 
-                || part.info.excursion1=='Airbus und Dornier' 
-                || part.info.excursion2=='KKW (CH)' 
-                || part.info.excursion2=='Airbus und Dornier' 
-                || part.info.excursion3=='KKW (CH)' 
-                || part.info.excursion3=='Airbus und Dornier' " 
-            class="fieldinfo">
-        * wird für KKW/Airbus benötigt
-    </p>
+        <tr>
+            <td>
+                <span *ngIf="part.info.excursion1=='KKW (CH)' 
+                        || part.info.excursion1=='Airbus und Dornier' 
+                        || part.info.excursion2=='KKW (CH)' 
+                        || part.info.excursion2=='Airbus und Dornier' 
+                        || part.info.excursion3=='KKW (CH)' 
+                        || part.info.excursion3=='Airbus und Dornier' " 
+                    class="fieldinfo">
+                    * wird für KKW/Airbus benötigt
+                </span>
+            </td>
+            <td>
+                <button *ngIf="state=='edit'" (click)="save()">
+                    Speichern
+                    <span *ngIf="part.info.robe==true"> und kostenpflichtig vorbestellen</span>
+                </button>
+            </td>
+        </table>
 </form>

@@ -16,6 +16,7 @@ export class ParticipantComponent implements OnInit {
     @Output() public up: EventEmitter<boolean> = new EventEmitter();
     @Output() public down: EventEmitter<boolean> = new EventEmitter();
     public state: string;
+    //public savepositon: boolean = false;
 
     constructor(private rest: RestClient) {}    
     
@@ -43,6 +44,11 @@ export class ParticipantComponent implements OnInit {
     public goDown() {
         this.down.emit(true);
     }
+
+    /*public setSavePosition(state: boolean) {
+        this.savepositon = state;
+        console.log(state);
+    }*/
 
     public edit() {
         this.state = 'edit';
@@ -92,8 +98,5 @@ export class ParticipantComponent implements OnInit {
         );
     }
 
-    public updateTshirt(event) {
-        //alert(stringyfy(event));
-    }
     
 }
