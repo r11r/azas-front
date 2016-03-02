@@ -1,16 +1,17 @@
 <section class="azasfsinfo">
     <ul>
         <li>{{council.info.university}}</li>
-        <li>{{council.info.email}}</li>
-        <li>{{council.info.address }}</li>
+        <li><span class="label">Kürzel:</span>{{council.info.address}}</li>
+        <li><span class="label">Email:</span>{{council.info.email }}</li>
     </ul>
 </section>
-<h3>Teilnehmika</h3>
+<h3>Teilnehmika <span class="label">- absteigende Teilnahmepriorität</span></h3>
 <section class="azasparticpants">
     <ul>
         <li *ngFor="#part of council.participants; #i = index" 
             class="azasparticipant" 
             [class.approved]="part.approved"
+            [class.gremium]="part.info.gremium"
             [token]="council.info.token" 
             [part]="part"
             (deleted)="delParticipant(i)"

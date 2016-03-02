@@ -7,6 +7,7 @@
         Speichern
         <span *ngIf="part.info.robe==true"> und kostenpflichtig vorbestellen</span>
     </button>
+    <span *ngIf="state=='display'" class="status"></span>
 </nav>
 {{part.info.nickName}} ({{part.info.firstName}} {{part.info.lastName}}) 
 <span *ngIf="state=='save'" class="azasprocess"> - wird gespeichert</span> 
@@ -180,5 +181,13 @@
             </td>
         </tr>
     </table>
-    <p class="fieldinfo">* nur für Exkursionen X,Y und Z benötigt</p>
+    <p *ngIf="part.info.excursion1=='KKW (CH)' 
+                || part.info.excursion1=='Airbus und Dornier' 
+                || part.info.excursion2=='KKW (CH)' 
+                || part.info.excursion2=='Airbus und Dornier' 
+                || part.info.excursion3=='KKW (CH)' 
+                || part.info.excursion3=='Airbus und Dornier' " 
+            class="fieldinfo">
+        * wird für KKW/Airbus benötigt
+    </p>
 </form>
