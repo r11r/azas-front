@@ -29,7 +29,7 @@ export class ParticipantComponent implements OnInit {
     }
 
     public gremiums = ['', 'StAPF', 'TOPF', 'KomGrem','Vorstand ZaPF e.V.'];
-    public tshirts = ['xxs male','xs male','s male','m male','l male','xl male','xxl male','xxs female','xs female','s female','m female','l female','xl female','xxl female'];
+    public tshirts = ['xxs male','xs male','s male','m male','l male','xl male','xxl male','xxxl male','xxxxl male','xxs female','xs female','s female','m female','l female','xl female','xxl female', 'xxxl female', 'xxxxl female'];
     public foods = ['omnivor','vegetarisch','vegan'];
     public swimmers = ['entenmäßig', 'geht so', 'wie ein Block Granit'];
     public snorers = ['nein','ein bisschen','stark','Motorsäge'];
